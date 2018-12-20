@@ -2,7 +2,8 @@ import React from 'react';
 import classes from './Burger.css';
 import BurgerIngredient from './BurgerIngredient';
 
-export default (props) => {
+const burger = (props) => {
+  console.log('->', props.ingredients);
   let transformedIngredients = Object.keys(props.ingredients).map(igKey => {
     const result = [...Array(props.ingredients[igKey])]
       .map((_, i) => { 
@@ -21,3 +22,5 @@ export default (props) => {
     </div>
   );
 };
+
+export default burger;
